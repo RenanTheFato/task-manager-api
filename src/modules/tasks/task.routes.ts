@@ -87,4 +87,23 @@ export const taskRoutes: FastifyPluginAsyncZod<TaskRoutesOptions> = async (
       return task;
     },
   );
+
+  app.delete(
+    '/tasks/:id',
+    {
+      schema: {
+        params: taskParamsSchema,
+        response: {
+          204: z.null(),
+          400: errorResponseSchema,
+          404: errorResponseSchema,
+        },
+      },
+    },
+    async (request, reply) => {
+      const deleted = repository.delete(request.params.id);
+      if (!deleted) throw new NotFoundError('Tarefa não encontrada');
+      return reply.status(204).send(null);
+    },
+  );
 };
