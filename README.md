@@ -176,16 +176,16 @@ O trabalho segue **Kanban** no GitHub Projects, com as colunas **Backlog → Em 
 
 ## Integrantes
 
-| Nome | GitHub |
-|---|---|
-| Renan Dias Santos de Santana | [@RenanTheFato](https://github.com/RenanTheFato) |
-| Luan Kaue | — |
-| Arthur Roberto Weege Pontes | — |
-| Douglas Henrique dos Santos Xavier | — |
-| Endrigo | — |
-| Felipe Moreira | — |
-| Guilherme Silveira Fernandes da Silva | — |
-| Igor de Souza Delmondes | — |
+| Nome |
+|---|
+| Renan Dias Santos de Santana 
+| Luan Kaue 
+| Arthur Roberto Weege Pontes 
+| Douglas Henrique dos Santos Xavier 
+| Endrigo 
+| Felipe Moreira 
+| Guilherme Silveira Fernandes da Silva 
+| Igor de Souza Delmondes 
 
 ## Licença
 
