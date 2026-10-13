@@ -48,4 +48,8 @@ export class TaskRepository {
     this.tasks.set(id, updated);
     return updated;
   }
+
+  delete(id: string): boolean {
+    return this.tasks.delete(id);
+  }
 }
