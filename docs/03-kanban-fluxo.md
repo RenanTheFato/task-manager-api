@@ -72,16 +72,20 @@ Exemplo: `feat(tasks): cria endpoint POST /tasks para adicionar tarefa` + rodap�
 | #6 Deletar tarefa | `feat/6-deletar-tarefa` |
 | #7 Documentação ágil | `docs/7-documentacao-agil` |
 
-## Divisão entre os integrantes (sugestão para 4 pessoas)
+## Divisão entre os integrantes
 
-| Integrante | Papel ágil | Issues | Revisa PRs de |
+| Integrante | Papel ágil | Issue | Revisa PRs de |
 |---|---|---|---|
-| Integrante 1 | Product Owner | #1 Setup, #7 Docs | Integrante 2 |
-| Integrante 2 | Dev | #2 CI, #3 Criar | Integrante 3 |
-| Integrante 3 | Dev | #4 Listar, #5 Atualizar | Integrante 4 |
-| Integrante 4 | Facilitador (Scrum Master) | #6 Deletar | Integrante 1 |
+| Renan Dias Santos de Santana | Product Owner | #1 Setup | #2 |
+| Luan Kaue | Dev | #2 CI | #3 |
+| Arthur Roberto Weege Pontes | Dev | #3 Criar tarefa | #4 |
+| Douglas Henrique dos Santos Xavier | Dev | #4 Listar tarefas | #5 |
+| Endrigo | Dev | #5 Atualizar tarefa | #6 |
+| Felipe Moreira | Dev | #6 Deletar tarefa | #7 |
+| Guilherme Silveira Fernandes da Silva | Scrum Master (facilitador) | #7 Documentação | #1 |
+| Igor de Souza Delmondes | QA | Valida os critérios de aceite de todas as issues | todos |
 
-Todos revisam e todos têm ao menos um PR mergeado. Assim, cada integrante aparece no histórico de commits e de revisões.
+Com 8 pessoas e limite de WIP de 1 item por pessoa, cada integrante é responsável por uma issue e revisa a do colega seguinte.
 
 ## Ciclo de uma issue
 
