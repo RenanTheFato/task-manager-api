@@ -1,0 +1,26 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+
+# Cobertura de testes
+coverage/
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Banco local (caso o SQLite seja adotado no futuro)
+*.sqlite
+*.db
+
+# Sistema / IDE
+.DS_Store
+.vscode/
+.idea/
