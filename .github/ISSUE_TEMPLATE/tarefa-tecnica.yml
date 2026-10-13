@@ -1,0 +1,36 @@
+name: Tarefa técnica
+description: Setup, testes, CI ou documentação (habilita a entrega de valor)
+labels: ["chore"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: O que será feito e qual valor isso habilita.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade
+      options:
+        - Alta
+        - Média
+        - Baixa
+    validations:
+      required: true
+  - type: dropdown
+    id: estimativa
+    attributes:
+      label: Estimativa (story points)
+      options: ["1", "2", "3", "5", "8"]
+    validations:
+      required: true

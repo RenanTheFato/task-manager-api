@@ -1,0 +1,47 @@
+name: Funcionalidade
+description: Nova funcionalidade do produto (item do backlog)
+title: "Criar endpoint para "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: historia
+    attributes:
+      label: História de usuário
+      description: Quem precisa, o que precisa e por quê (valor ao cliente).
+      placeholder: Como usuário, quero ... para ...
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição técnica
+      description: Endpoint, método HTTP, dados de entrada e saída.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      description: Condições verificáveis para considerar a issue pronta.
+      value: |
+        - [ ] 
+        - [ ] Testes automatizados cobrindo sucesso e erro
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade (valor ao cliente)
+      options:
+        - Alta
+        - Média
+        - Baixa
+    validations:
+      required: true
+  - type: dropdown
+    id: estimativa
+    attributes:
+      label: Estimativa (story points)
+      options: ["1", "2", "3", "5", "8"]
+    validations:
+      required: true
