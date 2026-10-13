@@ -178,10 +178,14 @@ O trabalho segue **Kanban** no GitHub Projects, com as colunas **Backlog → Em 
 
 | Nome | GitHub |
 |---|---|
-| _Integrante 1_ | [@RenanTheFato](https://github.com/RenanTheFato) |
-| _Integrante 2_ | _@usuario_ |
-| _Integrante 3_ | _@usuario_ |
-| _Integrante 4_ | _@usuario_ |
+| Renan Dias Santos de Santana | [@RenanTheFato](https://github.com/RenanTheFato) |
+| Luan Kaue | — |
+| Arthur Roberto Weege Pontes | — |
+| Douglas Henrique dos Santos Xavier | — |
+| Endrigo | — |
+| Felipe Moreira | — |
+| Guilherme Silveira Fernandes da Silva | — |
+| Igor de Souza Delmondes | — |
 
 ## Licença
 
