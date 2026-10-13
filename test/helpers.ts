@@ -7,6 +7,9 @@ export async function createTestApp(): Promise<App> {
   return app;
 }
 
+/** UUID válido que nunca é gerado pela API. */
+export const UNKNOWN_ID = '00000000-0000-4000-8000-000000000000';
+
 /** Cria uma tarefa via API e devolve o corpo da resposta. */
 export async function createTask(
   app: App,
