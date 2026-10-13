@@ -7,6 +7,7 @@ import {
   listTasksQuerySchema,
   taskParamsSchema,
   taskSchema,
+  updateTaskBodySchema,
 } from './task.schemas.js';
 
 interface TaskRoutesOptions {
@@ -62,6 +63,26 @@ export const taskRoutes: FastifyPluginAsyncZod<TaskRoutesOptions> = async (
     },
     async (request) => {
       const task = repository.findById(request.params.id);
+      if (!task) throw new NotFoundError('Tarefa não encontrada');
+      return task;
+    },
+  );
+
+  app.patch(
+    '/tasks/:id',
+    {
+      schema: {
+        params: taskParamsSchema,
+        body: updateTaskBodySchema,
+        response: {
+          200: taskSchema,
+          400: errorResponseSchema,
+          404: errorResponseSchema,
+        },
+      },
+    },
+    async (request) => {
+      const task = repository.update(request.params.id, request.body);
       if (!task) throw new NotFoundError('Tarefa não encontrada');
       return task;
     },

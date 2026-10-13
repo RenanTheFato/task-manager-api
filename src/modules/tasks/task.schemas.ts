@@ -46,3 +46,16 @@ export type ListTasksFilter = z.infer<typeof listTasksQuerySchema>;
 export const taskParamsSchema = z.object({
   id: z.uuid({ error: 'O ID deve ser um UUID válido' }),
 });
+
+/** Body de PATCH /tasks/:id: atualização parcial, com ao menos um campo. */
+export const updateTaskBodySchema = z
+  .object({
+    title: titleSchema.optional(),
+    description: descriptionSchema.nullable().optional(),
+    completed: z.boolean({ error: 'completed deve ser booleano' }).optional(),
+  })
+  .refine((body) => Object.values(body).some((value) => value !== undefined), {
+    error: 'Informe ao menos um campo para atualizar',
+  });
+
+export type UpdateTaskInput = z.infer<typeof updateTaskBodySchema>;
