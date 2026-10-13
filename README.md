@@ -1,5 +1,7 @@
 # task-manager-api
 
+[![CI](https://github.com/RenanTheFato/task-manager-api/actions/workflows/ci.yml/badge.svg)](https://github.com/RenanTheFato/task-manager-api/actions/workflows/ci.yml)
+
 API REST para gerenciamento de tarefas, desenvolvida como trabalho em grupo da disciplina de **Gestão Ágil**. O projeto aplica práticas **Lean**, **Kanban** e **Scrum** usando **GitHub Issues** (backlog) e **GitHub Projects** (quadro Kanban).
 
 ## Propósito
