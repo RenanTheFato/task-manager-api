@@ -5,6 +5,7 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod';
 import { z } from 'zod';
+import { registerErrorHandler } from './errors.js';
 
 export function buildApp(options: FastifyServerOptions = {}) {
   const app = Fastify(options).withTypeProvider<ZodTypeProvider>();
@@ -12,6 +13,8 @@ export function buildApp(options: FastifyServerOptions = {}) {
   // Integra os schemas Zod à validação (entrada) e serialização (saída) do Fastify
   app.setValidatorCompiler(validatorCompiler);
   app.setSerializerCompiler(serializerCompiler);
+
+  registerErrorHandler(app);
 
   app.get(
     '/health',
