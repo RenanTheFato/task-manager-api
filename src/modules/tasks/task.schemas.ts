@@ -31,3 +31,18 @@ export const createTaskBodySchema = z.object({
 });
 
 export type CreateTaskInput = z.infer<typeof createTaskBodySchema>;
+
+/** Querystring de GET /tasks. */
+export const listTasksQuerySchema = z.object({
+  completed: z
+    .enum(['true', 'false'], { error: 'completed deve ser "true" ou "false"' })
+    .transform((value) => value === 'true')
+    .optional(),
+});
+
+export type ListTasksFilter = z.infer<typeof listTasksQuerySchema>;
+
+/** Params das rotas que recebem /tasks/:id. */
+export const taskParamsSchema = z.object({
+  id: z.uuid({ error: 'O ID deve ser um UUID válido' }),
+});

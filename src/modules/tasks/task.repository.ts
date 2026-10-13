@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import type { CreateTaskInput, Task } from './task.schemas.js';
+import type { CreateTaskInput, ListTasksFilter, Task } from './task.schemas.js';
 
 /** Persistência em memória: suficiente para o MVP, sem custo de infraestrutura. */
 export class TaskRepository {
@@ -17,5 +17,15 @@ export class TaskRepository {
     };
     this.tasks.set(task.id, task);
     return task;
+  }
+
+  findAll(filter: ListTasksFilter = {}): Task[] {
+    const tasks = [...this.tasks.values()];
+    if (filter.completed === undefined) return tasks;
+    return tasks.filter((task) => task.completed === filter.completed);
+  }
+
+  findById(id: string): Task | undefined {
+    return this.tasks.get(id);
   }
 }
